@@ -1,4 +1,21 @@
 ---
+permissions:
+   actions: read
+   attestations: read
+   checks: read
+   contents: read
+   deployments: read
+   discussions: read
+   id-token: none
+   issues: read
+   packages: read
+   pages: read
+   pull-requests: read
+   security-events: read
+   statuses: read
+   copilot-requests: write
+
+
 name: Code Simplifier
 description: Analyzes recently modified code and creates pull requests with simplifications that improve clarity, consistency, and maintainability while preserving functionality
 on:
@@ -7,14 +24,12 @@ on:
 
 network:
   allowed:
-  - defaults
-  - dotnet
-  - node
-  - python
-  - rust
-  - java
-
-permissions: read-all
+    - defaults
+    - dotnet
+    - node
+    - python
+    - rust
+    - java
 
 tracker-id: code-simplifier
 
